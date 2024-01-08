@@ -12,8 +12,9 @@ if not exists(file_path):
 
 with open(file_path, "r", encoding="utf-8") as file:
     book = file.read()
-    sentences1 = re.findall(r'((?<=[.!?])\s+)', book)  # znamienko a medzera po nom
+    sentences1 = re.findall(r'((?<=[.!?])\s+)', book)  # znaménko a potom mezera
     print(len(sentences1))
     sentences2 = re.findall(r'(?<!\b[A-Z][a-z])\.((?<=[.!?])\s+)', book)
-  # prva zatvorka vynimka tituly ako mr. etc druha zatvorka je medzera po znamienku
+  # prvni zavorka odebírá tituly jako mr. etc druha
+  # zavorka je mezera po znaménku
     print(len(sentences2))

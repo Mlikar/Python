@@ -1,0 +1,10 @@
+5;Pride and Prejudice;Austen Jane;Unavailable
+4;The Great Gatsby;Fitzgerald F. Scott;Unavailable
+9;Brave New World;Huxley Aldous;Available
+2;To Kill a Mockingbird;Lee Harper;Unavailable
+3;1984;Orwell George;Available
+10;Animal Farm;Orwell George;Available
+1;Harry Potter and the Philosopher's Stone;Rowling J.K.;Available
+6;The Catcher in the Rye;Salinger J.D.;Available
+7;Lord of the Rings;Tolkien J.R.R.;Available
+8;The Hobbit;Tolkien J.R.R.;Unavailable

@@ -1,3 +1,5 @@
+import math
+
 class Shape:
     def __init__(self):
         print("Vykresluji obrazec")
@@ -43,6 +45,46 @@ class Cube(Square):
     def print_info(self):
         print(f"Kostka se stranami o delce {self.a}")
 
+class Kruh(Shape):
+    def __init__(self, polomer=0):
+        super().__init__()
+        self.polomer = polomer
+        print("Vytvarim kruh")
+
+    def obvod(self):
+        return 2 * math.pi * self.polomer
+
+    def obsah(self):
+        return math.pi * self.polomer ** 2
+
+    def ziskej_polomer(self):
+        return self.polomer
+
+    def info(self):
+        print(f"Kruh s polomerem {self.polomer}")
+
+class Valec(Kruh):
+    def __init__(self, polomer=0, vyska=0):
+        super().__init__(polomer)
+        self.vyska = vyska
+        print("Vytvarim valec")
+
+    def objem(self):
+        return math.pi * self.ziskej_polomer() ** 2 * self.vyska
+
+    def info(self):
+        print(f"Valec s polomerem {self.ziskej_polomer()} a vyskou {self.vyska}")
+
+class Koule(Kruh):
+    def __init__(self, polomer=0):
+        super().__init__(polomer)
+        print("Vytvarim kouli")
+
+    def objem(self):
+        return (4 / 3) * math.pi * self.ziskej_polomer() ** 3
+
+    def info(self):
+        print(f"Koule s polomerem {self.ziskej_polomer()}")
 
 def main():
     rec = Rectangle()
@@ -51,6 +93,19 @@ def main():
     cb = Cube(5)
     print(cb.volume())
     cb.print_info()
+
+    kr = Kruh(3)
+    print(kr.obvod())
+    print(kr.obsah())
+    kr.info()
+
+    val = Valec(3, 4)
+    print(val.objem())
+    val.info()
+
+    gul = Koule(2)
+    print(gul.objem())
+    gul.info()
 
 
 if __name__ == "__main__":
